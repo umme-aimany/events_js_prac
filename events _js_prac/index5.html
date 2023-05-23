@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Item Details</title>
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .container h2 {
+      text-align: center;
+    }
+    .container .item {
+      margin-bottom: 20px;
+    }
+    .container .item .title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .container .item .details {
+      display: none;
+    }
+    .container .item .read-more {
+      color: blue;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Item Details</h2>
+    <div class="item">
+      <div class="title">Item 1</div>
+      <div class="summary">
+        This is a summary of Item 1. Only a portion of the details is shown initially.
+      </div>
+      <div class="details">
+        <p>Full details of Item 1:</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel sem eu urna ultrices bibendum. Mauris semper volutpat velit, eu euismod ipsum pharetra a. Vivamus fermentum, justo eget efficitur malesuada, ligula justo eleifend lectus, at faucibus dolor elit nec lectus.</p>
+      </div>
+      <div class="read-more" onclick="toggleDetails(this)">Read more</div>
+    </div>
+    <div class="item">
+      <div class="title">Item 2</div>
+      <div class="summary">
+        This is a summary of Item 2. Only a portion of the details is shown initially.
+      </div>
+      <div class="details">
+        <p>Full details of Item 2:</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel sem eu urna ultrices bibendum. Mauris semper volutpat velit, eu euismod ipsum pharetra a. Vivamus fermentum, justo eget efficitur malesuada, ligula justo eleifend lectus, at faucibus dolor elit nec lectus.</p>
+      </div>
+      <div class="read-more" onclick="toggleDetails(this)">Read more</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetails(button) {
+      const item = button.parentNode;
+      const details = item.querySelector('.details');
+      
+      if (details.style.display === 'none') {
+        details.style.display = 'block';
+        button.innerHTML = 'Read less';
+      } else {
+        details.style.display = 'none';
+        button.innerHTML = 'Read more';
+      }
+    }
+  </script>
+</body>
+</html>

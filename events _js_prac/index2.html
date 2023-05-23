@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form onSubmit="aimankhan('name','check','password')">
+    NAME:
+    <input type="text"id="name">
+    EMAIL:
+    <input type="email"id="check">
+    PASSWORD:
+    <input type="password"id="password">
+    SUBMIT:
+    <input type="submit"value="submit">
+</form>
+
+    <script >
+function aimankhan(name,check,password){
+if(document.getElementById(name,check,password).value===''){
+    alert("pls fill the field")
+}
+else{
+    alert("your form is submitted")
+}
+}
+    </script> -->
+    <H1>SIGN UP FORM</H1>
+    <form onClick="form('name','email','password')">
+    NAME:
+    <input onmouseover="this.style.backgroundColor='grey';"onMouseout="this.style.backgroundColor='pink';" type="text"placeholder="name"id="name">
+    EMAIL:
+    <input
+    onmouseover="this.style.backgroundColor='grey';"onMouseout="this.style.backgroundColor='pink';" type="email"placeholder="email"id="email">
+    PASSWORD:
+    <input  onmouseover="this.style.backgroundColor='grey';"onMouseout="this.style.backgroundColor='pink';"type="password"placeholder="password"id="password">
+    <input onfocus="this.style.backgroundColor='pink';" type="submit"value="SUBMIT">
+
+</form>
+<script>
+    function form(name,email,password){
+if (document.getElementById(name,email,password).value==''){
+alert("plz fill the required fields")
+}
+else{
+    alert("your form is submit")
+}
+
+    }
+    
+</script>
+    
+</body>
+</html>
